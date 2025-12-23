@@ -9,3 +9,4 @@ def llm_insights(profile: dict):
         return generate_llm_insights(profile)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
