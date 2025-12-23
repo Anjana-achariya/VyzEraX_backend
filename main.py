@@ -9,7 +9,7 @@ app = FastAPI(title="AI analytics backend")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -22,3 +22,4 @@ def health():
 # 🔹 Routers
 app.include_router(analyse_router, prefix="/api")
 app.include_router(insights_router, prefix="/api")
+
